@@ -1,24 +1,28 @@
 //
 //  ContentView.swift
-//  RecipesApp
+//  RecipeApp
 //
-//  Created by Selena García Lobo on 20/02/2024.
+//  Created by Selena García Lobo on 19/02/2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = HomeViewModel(recipeService: DefaultRecipeService(), recipes: [])
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            HomeView(viewModel: viewModel)
+                .onAppear {
+                    viewModel.loadRecipes()
+                }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
+
