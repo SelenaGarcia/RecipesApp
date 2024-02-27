@@ -30,17 +30,18 @@ struct SearchBar: View {
                         }) {
                             HStack {
                                 Text(filter)
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(ColorSet.primaryColor)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 4)
-                                    .background(RoundedRectangle(cornerRadius: 8).stroke(Color.blue, lineWidth: 1))
+                                    .background(RoundedRectangle(cornerRadius: 8).stroke(ColorSet.primaryColor, lineWidth: 1))
 
                                 Image(systemName: "x.circle.fill")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(ColorSet.primaryColor)
                                     .onTapGesture {
                                         onFilterRemove(filter)
                                     }
                             }
+                            .padding(.vertical)
                         }
                     }
                 }

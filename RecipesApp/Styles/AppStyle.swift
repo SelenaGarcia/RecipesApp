@@ -13,7 +13,6 @@ struct AppStyle {
         func body(content: Content) -> some View {
             content
                 .font(.subheadline)
-                .foregroundStyle(.white)
                 .padding()
                 .background(ColorSet.secondaryColor)
                 .clipShape(.rect())
@@ -28,17 +27,39 @@ struct AppStyle {
     struct Title: ViewModifier {
         func body(content: Content) -> some View {
             content
-                .font(.title)
-                .foregroundColor(.white)
+                .font(CustomFont.titleFont)
+                .foregroundColor(ColorSet.secondaryColor)
+                .padding()
+        }
+    }
+    struct Link: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .foregroundColor(ColorSet.secondaryColor)
+                .underline()
+                .padding()
         }
     }
     struct TextList: ViewModifier {
         func body(content: Content) -> some View {
             content
+                .font(CustomFont.textFont)
                 .background(.white)
                 .opacity(0.9)
                 .foregroundColor(ColorSet.secondaryColor)
                 .listRowSeparatorTint(ColorSet.accentColor)
+                
+        }
+    }
+    struct RemoteImageStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .scaledToFill()
+                .frame(maxWidth: .infinity)
+                .frame(height: 200)
+                .clipped()
+                .border(ColorSet.primaryColor, width: 10)
+                .cornerRadius(10)
         }
     }
 
@@ -56,5 +77,11 @@ extension View {
     }
     func textList() -> some View {
         modifier(AppStyle.TextList())
+    }
+    func link() -> some View {
+        modifier(AppStyle.Link())
+    }
+    func remoteImageStyle() -> some View {
+        modifier(AppStyle.RemoteImageStyle())
     }
 }

@@ -25,7 +25,8 @@ struct HomeView: View {
                     }
                     .textList()
                 }
-                .background(.white)
+                .scrollContentBackground(.hidden)
+
                 if $viewModel.showLoader.wrappedValue {
                     ProgressView()
                 }

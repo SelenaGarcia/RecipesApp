@@ -29,6 +29,12 @@
 		00A17D4A2B8C472C002243D9 /* MapViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A17D492B8C472C002243D9 /* MapViewModelTest.swift */; };
 		00A17D4D2B8CFF72002243D9 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A17D4C2B8CFF72002243D9 /* AppStyle.swift */; };
 		00A17D4F2B8D9C9B002243D9 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A17D4E2B8D9C9B002243D9 /* ColorSet.swift */; };
+		00A17D562B8DB05D002243D9 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A17D552B8DB05D002243D9 /* CustomFont.swift */; };
+		00A17D602B8DB952002243D9 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00A17D5F2B8DB952002243D9 /* DancingScript-Regular.ttf */; };
+		00A17D622B8E39FD002243D9 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00A17D612B8E39FD002243D9 /* PlusJakartaSans-Regular.ttf */; };
+		00A17D652B8E47B4002243D9 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 00A17D642B8E47B4002243D9 /* InlineSnapshotTesting */; };
+		00A17D672B8E47B4002243D9 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 00A17D662B8E47B4002243D9 /* SnapshotTesting */; };
+		00A17D692B8E4A23002243D9 /* DetailViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A17D682B8E4A23002243D9 /* DetailViewSnapshotTests.swift */; };
 		00D707272B844F46004D68F4 /* RecipesAppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D707262B844F46004D68F4 /* RecipesAppMain.swift */; };
 		00D707292B844F46004D68F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D707282B844F46004D68F4 /* ContentView.swift */; };
 		00D707382B844F47004D68F4 /* RecipesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D707372B844F47004D68F4 /* RecipesAppTests.swift */; };
@@ -87,6 +93,11 @@
 		00A17D492B8C472C002243D9 /* MapViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTest.swift; sourceTree = "<group>"; };
 		00A17D4C2B8CFF72002243D9 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		00A17D4E2B8D9C9B002243D9 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		00A17D552B8DB05D002243D9 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		00A17D5B2B8DB847002243D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00A17D5F2B8DB952002243D9 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
+		00A17D612B8E39FD002243D9 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		00A17D682B8E4A23002243D9 /* DetailViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewSnapshotTests.swift; sourceTree = "<group>"; };
 		00D707232B844F46004D68F4 /* RecipesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D707262B844F46004D68F4 /* RecipesAppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesAppMain.swift; sourceTree = "<group>"; };
 		00D707282B844F46004D68F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A17D672B8E47B4002243D9 /* SnapshotTesting in Frameworks */,
+				00A17D652B8E47B4002243D9 /* InlineSnapshotTesting in Frameworks */,
 				5DABEFE700BDDBB51748708A /* Pods_RecipesAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +206,7 @@
 		00A17D1D2B8451E8002243D9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				00A17D542B8DAFDE002243D9 /* Fonts */,
 				00A17D1E2B8451E8002243D9 /* ImageLoader.swift */,
 			);
 			path = Utilities;
@@ -219,8 +233,18 @@
 			children = (
 				00A17D4C2B8CFF72002243D9 /* AppStyle.swift */,
 				00A17D4E2B8D9C9B002243D9 /* ColorSet.swift */,
+				00A17D552B8DB05D002243D9 /* CustomFont.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		00A17D542B8DAFDE002243D9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				00A17D612B8E39FD002243D9 /* PlusJakartaSans-Regular.ttf */,
+				00A17D5F2B8DB952002243D9 /* DancingScript-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		00D7071A2B844F46004D68F4 = {
@@ -250,6 +274,7 @@
 		00D707252B844F46004D68F4 /* RecipesApp */ = {
 			isa = PBXGroup;
 			children = (
+				00A17D5B2B8DB847002243D9 /* Info.plist */,
 				00A17D0F2B8451E8002243D9 /* Views */,
 				00A17D152B8451E8002243D9 /* ViewModels */,
 				00A17D0A2B8451E8002243D9 /* Models */,
@@ -271,6 +296,7 @@
 				00A17D3C2B8A9DF9002243D9 /* HomeViewModelTests.swift */,
 				00A17D472B8C429A002243D9 /* DetailViewModelTests.swift */,
 				00A17D492B8C472C002243D9 /* MapViewModelTest.swift */,
+				00A17D682B8E4A23002243D9 /* DetailViewSnapshotTests.swift */,
 			);
 			path = RecipesAppTests;
 			sourceTree = "<group>";
@@ -362,6 +388,10 @@
 				00D707352B844F47004D68F4 /* PBXTargetDependency */,
 			);
 			name = RecipesAppTests;
+			packageProductDependencies = (
+				00A17D642B8E47B4002243D9 /* InlineSnapshotTesting */,
+				00A17D662B8E47B4002243D9 /* SnapshotTesting */,
+			);
 			productName = RecipesAppTests;
 			productReference = 00D707332B844F47004D68F4 /* RecipesAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -422,6 +452,9 @@
 				Base,
 			);
 			mainGroup = 00D7071A2B844F46004D68F4;
+			packageReferences = (
+				00A17D632B8E47B4002243D9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 00D707242B844F46004D68F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -447,6 +480,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A17D2F2B8451E8002243D9 /* Assets.xcassets in Resources */,
+				00A17D622B8E39FD002243D9 /* PlusJakartaSans-Regular.ttf in Resources */,
+				00A17D602B8DB952002243D9 /* DancingScript-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A17D562B8DB05D002243D9 /* CustomFont.swift in Sources */,
 				00A17D272B8451E8002243D9 /* HomeView.swift in Sources */,
 				00A17D2D2B8451E8002243D9 /* APIClient.swift in Sources */,
 				00A17D4D2B8CFF72002243D9 /* AppStyle.swift in Sources */,
@@ -610,6 +646,7 @@
 			files = (
 				00D707382B844F47004D68F4 /* RecipesAppTests.swift in Sources */,
 				00A17D432B8AD22F002243D9 /* HomeViewModelTests.swift in Sources */,
+				00A17D692B8E4A23002243D9 /* DetailViewSnapshotTests.swift in Sources */,
 				00A17D482B8C429A002243D9 /* DetailViewModelTests.swift in Sources */,
 				00A17D4A2B8C472C002243D9 /* MapViewModelTest.swift in Sources */,
 			);
@@ -816,6 +853,7 @@
 				DEVELOPMENT_TEAM = ZC2GXQABY4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecipesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -851,6 +889,7 @@
 				DEVELOPMENT_TEAM = ZC2GXQABY4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecipesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1003,6 +1042,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00A17D632B8E47B4002243D9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00A17D642B8E47B4002243D9 /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00A17D632B8E47B4002243D9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		00A17D662B8E47B4002243D9 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00A17D632B8E47B4002243D9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00D7071B2B844F46004D68F4 /* Project object */;
 }

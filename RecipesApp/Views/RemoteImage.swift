@@ -18,8 +18,9 @@ struct RemoteImage: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.blue)
+                .foregroundColor(.white)
                 .frame(width: 200, height: 200)
+                .cornerRadius(20)
             imageLoader.image?
                 .resizable()
                 .aspectRatio(contentMode: .fill)

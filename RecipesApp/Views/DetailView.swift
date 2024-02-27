@@ -13,21 +13,16 @@ struct DetailView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 RemoteImage(url: recipe.image)
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 200)
-                    .clipped()
+                    .remoteImageStyle()
                 Text(recipe.name)
-                    .font(.title)
-                    .padding()
+                    .title()
 
                 Text(recipe.description)
                     .padding()
 
                 NavigationLink(destination: MapView(recipe: recipe)) {
                     Text("Ver en el mapa")
-                        .foregroundColor(.blue)
-                        .padding()
+                        .link()
                 }
 
             }
