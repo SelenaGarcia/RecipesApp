@@ -9,19 +9,23 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
+
     var body: some View {
         VStack {
             SearchBar(searchText: $viewModel.searchText,
                       filters: $viewModel.filters,
                       onFilterAdd: viewModel.onFilterAdd,
                       onFilterRemove: viewModel.removeFilter)
+                .searchBar()
 
             ZStack {
                 List(viewModel.filteredRecipes) { recipe in
                     NavigationLink(destination: DetailView(recipe: recipe)) {
                         RecipeRow(recipe: recipe)
                     }
+                    .textList()
                 }
+                .background(.white)
                 if $viewModel.showLoader.wrappedValue {
                     ProgressView()
                 }
@@ -30,6 +34,7 @@ struct HomeView: View {
 
         }
         .navigationTitle("Recetas")
+
     }
 }
 

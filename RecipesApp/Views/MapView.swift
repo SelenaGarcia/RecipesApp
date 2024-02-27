@@ -14,14 +14,15 @@ struct MapView: View {
     var body: some View {
         Map(coordinateRegion: .constant(
             MKCoordinateRegion(
-                center: CLLocationCoordinate2D(
-                    latitude: recipe.location.lat,
-                    longitude: recipe.location.lng
-                ),
+                center: recipe.location.coordinate,
                 span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-            )
-        )
-        )
+            )),
+            annotationItems: [recipe]
+        ) { recipe in
+            MapMarker(coordinate: recipe.location.coordinate,
+                      tint: Color.brown)
+        }
+
         .navigationTitle("Ubicación de \(recipe.name)")
     }
 }

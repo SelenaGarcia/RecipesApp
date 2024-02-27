@@ -22,10 +22,6 @@ struct SearchBar: View {
                     onFilterAdd(searchText)
                 }
 
-            Text("Filtros:")
-                .font(.caption)
-                .foregroundColor(.secondary)
-
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     ForEach(filters, id: \.self) { filter in
